@@ -1,6 +1,6 @@
 specbee_assignment.location_form:
-  title: 'Admin Configuration'
+  title: 'TimeZone Configuration'
   route_name: specbee_assignment.location_form
-  description: 'A description for the menu entry'
+  description: 'Timezone configuration of user'
   parent: system.admin_config_system
   weight: 99

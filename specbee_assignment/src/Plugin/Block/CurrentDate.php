@@ -8,6 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Cache\UncacheableDependencyTrait;
 
 /**
  * Provides a block with a simple text.
@@ -18,6 +19,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * )
  */
 class CurrentDate extends BlockBase implements ContainerFactoryPluginInterface {
+
+
+  use UncacheableDependencyTrait;
 
   /**
    * The date calculator.
@@ -38,7 +42,6 @@ class CurrentDate extends BlockBase implements ContainerFactoryPluginInterface {
    * @param \Drupal\specbee_assignment\DateSevices $date
    *   The date calculator.
    */
-  
   public function __construct(
     array $configuration,
     $plugin_id,
@@ -69,6 +72,7 @@ class CurrentDate extends BlockBase implements ContainerFactoryPluginInterface {
     $time = $this->date->currentDate();
     $city = \Drupal::config('specbee_assignment.settings')->get('city');
     $country = \Drupal::config('specbee_assignment.settings')->get('country');
+
     return [
       '#theme' => 'block__user_timezone',
       '#time' => $time,

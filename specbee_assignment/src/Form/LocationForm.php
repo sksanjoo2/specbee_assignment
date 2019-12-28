@@ -41,7 +41,7 @@ class LocationForm extends ConfigFormBase {
       'Asia/Dubai' => 'Asia/Dubai',
       'Europe/Amsterdam' => 'Europe/Amsterdam',
       'Europe/Oslo' => 'Europe/Oslo',
-      'Europe/London' => 'Europe/London'
+      'Europe/London' => 'Europe/London',
     ];
 
     $form['country'] = [
