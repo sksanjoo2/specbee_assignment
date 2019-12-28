@@ -1,0 +1,9 @@
+specbee_assignment.location_form:
+  path: '/admin/config/assignment/settings'
+  defaults:
+    _form: '\Drupal\specbee_assignment\Form\LocationForm'
+    _title: 'LocationForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

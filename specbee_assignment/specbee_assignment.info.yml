@@ -1,0 +1,7 @@
+name: specbee_assignment
+type: module
+description: Admin Configuration for user
+core: 8.x
+package: Custom
+dependencies:
+  - block

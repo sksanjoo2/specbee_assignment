@@ -1,0 +1,3 @@
+services:
+ specbee_assignment.current_date:
+   class: Drupal\specbee_assignment\DateServices

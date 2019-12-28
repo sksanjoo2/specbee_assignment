@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * General alterations for form, blocks ,views and themes.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function specbee_assignment_theme($existing, $type, $theme, $path) {
+  return [
+    'block__user_timezone' => [
+      'variables' => ['time' => NULL, 'city' => NULL, 'country' => NULL],
+    ],
+  ];
+}
