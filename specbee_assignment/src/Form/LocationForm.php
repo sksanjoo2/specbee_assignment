@@ -60,7 +60,7 @@ class LocationForm extends ConfigFormBase {
       '#type' => 'select',
       '#title' => $this->t('timezone'),
       '#options' => $zone,
-      '#default_value' => $config->get('zone'),
+      '#default_value' => $config->get('timezone'),
     ];
 
     return parent::buildForm($form, $form_state);
